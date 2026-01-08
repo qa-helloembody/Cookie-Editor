@@ -24,7 +24,7 @@
             personalSpoiler: 'cookieEditor_personalSpoilerOpen',
             scoreSpoiler: 'cookieEditor_scoreSpoilerOpen'
         },
-        specialFunnels: ['w1f123r', 'w2f123r', 'c1f23r'],
+        specialFunnels: ['w1f123r', 'w2f123r', 'c1f23r', 'chb2f23r'],
 
         // --- JSON TEMPLATES ---
         defaultQuickFillJson: {
@@ -544,7 +544,7 @@
     function renderAgePresets() {
         const funnel = getFunnelIdFromUrl();
         let presets = [];
-        if (funnel === 'c1f23r') {
+        if (funnel === 'c1f23r' || funnel === 'chb2f23r') {
             presets = [
                 { val: 40, label: "40-49" },
                 { val: 50, label: "50-59" },
@@ -637,7 +637,7 @@
     // --- Hide Sandbox Check ---
     const currentFunnel = getFunnelIdFromUrl();
     const sandboxContainer = panel.querySelector('#sandbox-container');
-    if (currentFunnel === 'w2f123r' && sandboxContainer) {
+    if ((currentFunnel === 'w2f123r' || currentFunnel === 'chb2f23r') && sandboxContainer) {
         sandboxContainer.style.display = 'none';
     }
 
@@ -860,7 +860,7 @@
 
         // --- Show/Hide Pilates/Yoga Level ---
         const funnel = getFunnelIdFromUrl();
-        if (funnel === 'c1f23r') {
+        if (funnel === 'c1f23r' || funnel === 'chb2f23r') {
             progLevelLabel.textContent = 'Yoga Level:';
             progLevelVal.textContent = pInfo.fitnessLevelScreen || '...';
             progLevelRow.style.display = 'flex';
@@ -1192,15 +1192,19 @@
         if (funnelId === 'c1f23r') {
              jsonData = { ...config.chairYogaJson };
              showStatus(`Filled with Chair Yoga data (${funnelId})`);
-        } else if (funnelId === 'w1f123r' || funnelId === 'w2f123r') {
+        } else if (funnelId === 'w1f123r') {
              jsonData = { ...config.wallPilatesJson };
-             // Dynamically update ID/Email for W1/W2
              jsonData.funnelId = funnelId;
-             if(jsonData.personalInfo && jsonData.personalInfo.email) {
-                 // Keep email as is or update based on preference?
-                 // Prompt implies using the provided JSON as base.
-             }
+             if(jsonData.personalInfo) jsonData.personalInfo.email = "hafrealtestmailw1+test@gmail.com";
              showStatus(`Filled with Wall Pilates data (${funnelId})`);
+        } else if (funnelId === 'w2f123r') {
+             jsonData = { ...config.wallPilatesJson };
+             jsonData.funnelId = funnelId;
+             if(jsonData.personalInfo) jsonData.personalInfo.email = "hafrealtestmailw2+test@gmail.com";
+             showStatus(`Filled with Wall Pilates data (${funnelId})`);
+        } else if (funnelId === 'chb2f23r') {
+             jsonData = { ...config.chairBarreJson };
+             showStatus(`Filled with Chair Barre data (${funnelId})`);
         } else {
             jsonData = config.defaultQuickFillJson;
             showStatus("Fields filled with default template data.");
@@ -1232,6 +1236,7 @@
     // Spoilers Toggle Logic with Persistence
     const toggleSpoiler = (header, content, toggleIcon, storageKey) => {
         header.addEventListener('click', () => {
+            console.log("Toggling spoiler:", header.id);
             const isHidden = content.style.display === 'none';
             content.style.display = isHidden ? 'block' : 'none';
             toggleIcon.textContent = isHidden ? '[-]' : '[+]';
