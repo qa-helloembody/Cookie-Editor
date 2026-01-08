@@ -301,6 +301,10 @@
                 </div>
 
                 <div class="editor-field">
+                                        <div class="score-display-wrapper">
+                        <label style="font-size:11px;">Metabolism:</label>
+                        <span id="meta-val" style="color:#98c379;">...</span>
+                    </div>
                     <div class="score-display-wrapper">
                         <label style="font-size:11px;">Somatotype:</label>
                         <span id="soma-val" style="color:#c678dd;">...</span>
@@ -309,17 +313,13 @@
                         <label style="font-size:11px;">Lifestyle:</label>
                         <span id="life-val" style="color:#61afef;">...</span>
                     </div>
-                    <div class="score-display-wrapper">
-                        <label style="font-size:11px;">Fitness Level:</label>
-                        <span id="fit-level-val" style="color:#e5c07b;">...</span>
-                    </div>
                     <div class="score-display-wrapper" id="prog-level-row" style="display:none;">
                         <label style="font-size:11px;" id="prog-level-label">Prog Level:</label>
                         <span id="prog-level-val" style="color:#61afef;">...</span>
                     </div>
                     <div class="score-display-wrapper">
-                        <label style="font-size:11px;">Metabolism:</label>
-                        <span id="meta-val" style="color:#98c379;">...</span>
+                        <label style="font-size:11px;">Fitness Level:</label>
+                        <span id="fit-level-val" style="color:#e5c07b;">...</span>
                     </div>
                 </div>
             </div>
