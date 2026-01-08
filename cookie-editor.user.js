@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name        Cookie Editor
 // @namespace   http://tampermonkey.net/
-// @version     3.8.0
-// @description All u need to test helloembody funnels
+// @version     3.10.0
+// @description Added Chair Barre (chb2f23r) support
 // @author      Bohdan S.
 // @match       https://haf-frontend.dev.prokit.me/*
 // @match       https://haf-frontend.dev2.prokit.me/*
@@ -38,7 +38,7 @@
                 "walkingActivity": "Less than 1 hour", "squatsLevel": "Fewer 12", "dailyActivityLevel": "Mostly sedentary", "energyLevel": "Low, tired most of the day", "sleepTime": "Less than 5 hours", "water": "About 2 glasses", "diet": "Vegan",
                 "badFoodHabits": ["Overeating"], "fitnessLevel": "Low",
                 "obese": { "BMI": "19.6", "BMI_range": "healthy", "somatotype": "mesomorph", "lifestyle": "sedentary", "fitness_level": "low", "metabolism": "moderate" },
-                "importantEvent": "Other", "email": "bohdan.stishenko+testf1@boosta.co", "name": "flex"
+                "importantEvent": "Other", "email": "hafrealtestmailf1+test@gmail.com", "name": "flex"
             },
             "checkoutFail": null, "checkoutPayment": null, "measurementSystem": "metric", "bmi": 19.555555555555557, "programType": "fitness"
         },
@@ -52,9 +52,22 @@
                 "walkingActivity": "More than 2 hours", "squatsLevel": "More than 20", "dailyActivityLevel": "Moderately active", "energyLevel": "High and consistent all day", "sleepTime": "Less than 5 hours", "water": "More than 10 glasses", "diet": "Mediterranean",
                 "badFoodHabits": ["Skipping meal to often"], "fitnessLevel": "Intermediate",
                 "obese": { "BMI": "19.6", "BMI_range": "healthy", "somatotype": "endomorph", "lifestyle": "active", "fitness_level": "intermediate", "metabolism": "slow" },
-                "referralSource": "Coach", "importantEvent": "Wedding", "importantEventDate": "03/22/2026", "personalConfidence": "I’m still really unsure", "email": "bohdan.stishenko+testc1@boosta.co", "name": "Chair Yoga"
+                "referralSource": "Coach", "importantEvent": "Wedding", "importantEventDate": "03/22/2026", "personalConfidence": "I’m still really unsure", "email": "hafrealtestmailc1+test@gmail.com", "name": "Chair Yoga"
             },
             "checkoutFail": null, "checkoutPayment": null, "measurementSystem": "metric", "bmi": 19.555555555555557, "programType": "yoga"
+        },
+        chairBarreJson: {
+            "activeTab": 58, "funnelId": "chb2f23r", "prevTab": null, "progress": 0, "selectedAge": 50, "selectedAgeValue": "50-59", "screensCount": 60, "unitsOfMeasurement": "kg", "paywallStatus": null, "selectedPlan": null,
+            "personalInfo": {
+                "totalScreens": 60, "firstScreenAge": 50, "chairYogaExperienceScreen": "Yes", "goal": "Maintain weight", "driveGoal": ["Reduce stress & anxiety"], "bodyCurrent": "Medium Build", "bodyTarget": "Balanced", "focusZones": ["Total Body"],
+                "weightChange": "I gain and lose weight easily", "bestShape": "1 to 2 years ago", "problemAreas": ["Legs", "Back", "Arms", "Neck"], "height": { "value": 180, "selectedUnit": "cm" }, "weightGoalDiff": 11,
+                "currentWeight": { "value": 44, "selectedUnit": "kg" }, "targetWeight": { "value": 49, "selectedUnit": "kg" }, "age": { "value": 55, "selectedUnit": "years" },
+                "obstacles": ["Health issues", "Unrealistic expectations"], "fitnessLevelScreen": "Advanced", "flexibilityLevel": "I can place my palms flat on the floor", "exerciseActivityLevel": "Regularly", "stairsLevel": "Out of breath after 1-2 flights", "walkingActivity": "More than 2 hours", "squatsLevel": "More than 20", "dailyActivityLevel": "Moderately active", "energyLevel": "Stable, but not very high", "sleepTime": "Less than 5 hours", "water": "2-6 glasses", "diet": "Keto",
+                "badFoodHabits": ["None of the above"], "fitnessLevel": "Intermediate",
+                "obese": { "BMI": "13.6", "BMI_range": "underweight", "somatotype": "ecto-meso mix", "lifestyle": "active", "fitness_level": "intermediate", "metabolism": "moderate" },
+                "referralSource": "Social media ads", "importantEvent": "Reunion", "importantEventDate": "04/08/2026", "personalConfidence": "I’m uncertain, but willing to try!", "email": "hafrealtestmailchb2+test@gmail.com", "name": "NameChair Barre"
+            },
+            "checkoutFail": null, "checkoutPayment": null, "measurementSystem": "metric", "bmi": 13.580246913580247, "programType": "barre", "weightGoalDiff": 11
         },
         wallPilatesJson: {
             "activeTab": 58, "funnelId": "w2f123r", "prevTab": null, "progress": 0, "selectedAge": 30, "selectedAgeValue": "30-39", "screensCount": 60, "unitsOfMeasurement": "kg", "paywallStatus": null, "selectedPlan": null,
@@ -66,7 +79,7 @@
                 "walkingActivity": "1-2 hours", "squatsLevel": "13-20", "dailyActivityLevel": "Moderately active", "energyLevel": "Energy fluctuates all day", "sleepTime": "Less than 5 hours", "water": "7-10 glasses", "diet": "Mediterranean",
                 "badFoodHabits": ["Skipping meal to often"], "fitnessLevel": "Low",
                 "obese": { "BMI": "20.4", "BMI_range": "healthy", "somatotype": "endomorph", "lifestyle": "moderately active", "fitness_level": "low", "metabolism": "slow", "pilates_level": "low" },
-                "referralSource": "Social media ads", "importantEvent": "Wedding", "personalConfidence": "I’m still really unsure", "email": "bohdan.stishenko+testw1-2@boosta.co", "name": "Wall Pilates"
+                "referralSource": "Social media ads", "importantEvent": "Wedding", "personalConfidence": "I’m still really unsure", "email": "hafrealtestmailw1-w2+test@gmail.com", "name": "NameWall Pilates"
             },
             "checkoutFail": null, "checkoutPayment": null, "measurementSystem": "metric", "bmi": 20.37037037037037, "programType": "pilates"
         }
